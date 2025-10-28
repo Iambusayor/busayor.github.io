@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Busayo's Publications</title>
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+        } else if (theme === 'light') {
+          document.documentElement.classList.remove('dark-mode');
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark-mode');
+        }
+      })();
+    </script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <div class="container flex-wrap">
+          <h1 class="logo">
+            <a href="https://busayor.github.io/">Busayo Awobade</a>
+          </h1>
+                    <ul class="navbar">
+            <li><a href="index.html">About</a></li> <li><a href="publications.html">Publications</a></li>
+            <li><a href="news.html">Recent Highlights</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="assets/Busayo_Awobade_s_CV_281025.pdf" target="_blank">CV</a></li>
+            
+            <li>
+              <button id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+              </button>
+            </li>
+        </div>
+      </nav>
+    </header>
+
+    <div class="page container">
+      <h1 class="header-name">Publications</h1>
+      
+      <!-- <div class="publications-intro" style="text-align: justify">
+        <p>My research spans three main areas: Multilinguality, ML Efficiency, Robustness & Fairness</p>
+      </div> -->
+
+      <!-- Efficient ML & Systems -->
+      <div class="publication-category">
+        <h2 class="category-title">ML Efficiency & Systems</h2>
+
+        <div class="publication-item">
+        <div class="pub-title">
+          <a href="#" target="_blank">
+            AfriVox: Probing Multilingual and Accent Robustness of Speech LLMs
+          </a>
+        </div>
+        <div class="pub-authors"> <span class="author-highlight">Busayo Awobade</span>,  Mardhiyah Sanni, Tassallah Abdullahi, Chibuzor Okocha, Kelechi Ezema, Devendra Kayande, Lukman Enegi Ismaila, Gloria Ashiya Katuka, Tobi Olatunji </div>
+        <div class="pub-venue" title="The 19th Conference of the European Chapter
+of the Association for Computational Linguistics">UNDER REVIEW</div>
+        <div class="pub-description">
+            Introduction of AfriVox, an open-source benchmark for over 20 African languages and 100+ accents, used to evaluate leading multimodal LLMs, reveal significant performance disparities, 
+            and achieve state-of-the-art results through targeted fine-tuning.
+          </div>
+          <div class="pub-links">
+            <a href="https://huggingface.co/datasets/intronhealth/afrivox" target="_blank" class="pub-link">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+      </div>
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="#" target="_blank">
+            AfriSpeech-MultiBench: A Verticalized Multidomain Multicountry Benchmark Suite for African Accented English ASR
+          </a>
+        </div>
+        <div class="pub-authors">Gabrial Zencha Ashungafac, Mardhiyah Sanni,  <span class="author-highlight">Busayo Awobade</span>, Alex Gichamba, Tobi Olatunji</div>
+        <div class="pub-venue" title="International Joint Conference on Natural Language Processing & Asia-Pacific Chapter of the Association for Computational Linguistics">IJCNLP-AACL 2025</div>
+        <div class="pub-description">
+            Development and empirical analysis of Afrispeech-MultiBench, the first domain-specific evaluation benchmark for assessing speech recognition performance 
+            across 100+ African English accents and six application domains.
+          </div>
+          <div class="pub-links">
+            <a href="https://huggingface.co/collections/intronhealth/afrispeechmultibench-68635602d2408380646bc045" target="_blank" class="pub-link">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2505.20564" target="_blank">
+            The NaijaVoices Dataset: Cultivating Large-Scale, High-Quality, Culturally-Rich Speech Data for African Languages
+          </a>
+        </div>
+        <div class="pub-authors"> Chris Emezue, NaijaVoices Community, <span class="author-highlight">Busayo Awobade</span>,  Abraham Owodunni, Handel Emezue, Gloria  Emezue, Nefertiti Emezue, Sewade Ogun, Bunmi Akinremi, David Adelani, Chris Pal</div>
+        <div class="pub-venue" title="INTERSPEECH">Interspeech 2025</div>
+        <div class="pub-description">
+            Creation and validation of NaijaVoices, a novel 1,800-hour speech dataset for low-resource Nigerian languages 
+            (Igbo, Hausa, and Yoruba), addressing critical data scarcity and enabling substantial performance gains in automatic speech recognition models.
+          </div>
+          <div class="pub-links">
+            <a href="https://huggingface.co/naijavoices" target="_blank" class="pub-link">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+      </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2509.07471" target="_blank">
+            From Scarcity to Efficiency: Investigating the Effects of Data Augmentation on African Machine Translation
+          </a>
+        </div>
+        <div class="pub-authors"><span class="author-highlight">Busayo Awobade*</span>, Mardiyyah Oduwole*, Steven Kolawole*</div>
+        <div class="pub-venue" title="arXiv">arXiv</div>
+        <div class="pub-description">
+            Investigates how data augmentation techniques can enhance machine translation for low-resource African languages. 
+            Using sentence concatenation with back translation and switch-out across six languages, 
+            the approach demonstrates strong potential for advancing translation in under-resourced settings.
+          </div>
+          <div class="pub-links">
+            <a href="https://github.com/owos/afri_augs" target="_blank" class="pub-link">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+      </div>
+      
+
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2404.04759" target="_blank">
+            What Happens When Small Is Made Smaller? Exploring the Impact of Compression on Small Data Pretrained Language Models
+          </a>
+        </div>
+        <div class="pub-authors"><span class="author-highlight">Busayo Awobade*</span>, Mardiyyah Oduwole*, Steven Kolawole*</div>
+        <div class="pub-venue" title="5th Workshop on African Natural Language Processing">AfricaNLP 2024</div>
+        <div class="pub-description">
+            Demonstrates that compression techniques significantly improve the efficiency and effectiveness of small, 
+            low-resource language models, confirming that their benefits are not limited to large-scale models.
+          </div>
+          <div class="pub-links">
+            <a href="https://github.com/Iambusayor/Sparsity-Evaluation-on-Small-Data-Pre-Trained-Models" target="_blank" class="pub-link">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+      </div>
+
+
+
+      <!-- External Links -->
+      <div class="external-links">
+        <h2 class="category-title">External Profiles</h2>
+        <div class="external-link-list">
+          <a href="https://scholar.google.com/citations?user=CatEpc4AAAAJ&hl=en" target="_blank" class="external-link">
+            <i class="ai ai-google-scholar"></i> Google Scholar Profile
+          </a>
+          <a href="https://openreview.net/profile?id=%7EBusayo_Awobade1" target="_blank" class="external-link">
+            <i class="fas fa-file-alt"></i> OpenReview Profile
+          </a>
+          <a href="https://arxiv.org/search/?query=busayo+Awobade&searchtype=pub-authors" target="_blank" class="external-link">
+            <i class="fas fa-archive"></i> arXiv Papers
+          </a>
+        </div>
+      </div>
+
+      <div class="publications-note">
+        <p><small>* denotes equal contribution</small></p>
+        <p><small>This list includes peer-reviewed publications, workshop papers, and preprints. 
+        For the most up-to-date list with citation counts, please visit my Google Scholar profile.</small></p>
+      </div>
+
+    </div>
+    <script>
+      /**
+       * Toggles the visibility of a publication description.
+       */
+      function toggleDescription(descId, button) {
+        const desc = document.getElementById(descId);
+        // Check using computed style for a more robust toggle
+        const isHidden = window.getComputedStyle(desc).display === 'none';
+        
+        if (isHidden) {
+          desc.style.display = 'block';
+          button.textContent = 'Read less ▲';
+          button.setAttribute('aria-expanded', 'true');
+        } else {
+          desc.style.display = 'none';
+          button.textContent = 'Read more ▼';
+          button.setAttribute('aria-expanded', 'false');
+        }
+      }
+
+      /**
+       * Handles the theme toggle button click.
+       */
+      function handleThemeToggle() {
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+          themeToggle.addEventListener('click', function() {
+            const htmlEl = document.documentElement;
+            if (htmlEl.classList.contains('dark-mode')) {
+              htmlEl.classList.remove('dark-mode');
+              localStorage.setItem('theme', 'light');
+            } else {
+              htmlEl.classList.add('dark-mode');
+              localStorage.setItem('theme', 'dark');
+            }
+          });
+        }
+      }
+
+      /**
+       * Initializes ARIA attributes on page load.
+       */
+      function initializeAria() {
+        const buttons = document.querySelectorAll('.read-more-btn');
+        buttons.forEach(button => {
+          const descId = button.getAttribute('onclick').match(/'([^']+)'/)[1];
+          const desc = document.getElementById(descId);
+          if (desc && window.getComputedStyle(desc).display === 'none') {
+              button.setAttribute('aria-expanded', 'false');
+          } else {
+              button.setAttribute('aria-expanded', 'true');
+          }
+        });
+      }
+
+      // Run initialization code when the page is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        initializeAria();
+        handleThemeToggle();
+      });
+    </script>
+  </body>
+</html>

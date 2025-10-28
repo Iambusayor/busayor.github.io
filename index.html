@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Busayo Awobade</title>
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+        } else if (theme === 'light') {
+          document.documentElement.classList.remove('dark-mode');
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark-mode');
+        }
+      })();
+    </script>
+    <meta charset="utf-8" />
+    <meta
+      name="google-site-verification"
+      content="x90m5dgpe4F2vr3QIo56ycq2CR3JKLvZvqDGZ25jIss"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Busayo Awobade - My research goal is to make speech and language technology work for everyone, especially in low-resource settings. My work draws from several areas, including representation learning, data-centric AI, and the development of robust and efficient models. I am broadly interested in how we can build systems that are fundamentally more adaptable to the diverse and often imperfect data found in real-world environments."
+    />
+    <meta
+      name="keywords"
+      content="Busayo Awobade, Speech, Natural Language Processing, resource-constrained ML"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="author" href="https://hawobade.medium.com/" />
+    <link rel="author" href="https://www.linkedin.com/in/busayo-awobade-107a94175/"/>
+  </head>
+  
+
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <div class="container flex-wrap">
+          <h1 class="logo">
+            <a href="https://busayor.github.io">Busayo Awobade</a>
+          </h1>
+          <ul class="navbar">
+            <li><a href="index.html">About</a></li> <li><a href="publications.html">Publications</a></li>
+            <li><a href="news.html">Recent Highlights</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="assets/Busayo_Awobade_s_CV_281025.pdf" target="_blank">CV</a></li>
+            
+            <li>
+              <button id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <article class="page container">
+      <div class="page-content">
+        <div class="page-intro">
+          <div class="page-intro-item">
+            <div class="contact-header">
+              <strong>Busayo Awobade</strong>
+              <div class="affiliation">ML Scientist, <a href="https://www.intron.io/" target="_blank">Intron Inc.</a></div>
+              <!-- <div class="affiliation">ML Scientist, <a href="https://www.mlcollective.org/" target="_blank">ML Collective.</a></div> -->
+              <!-- <div class="company"><a href="https://www.intron.io/" target="_blank">Intron Inc.</a></div> -->
+            </div>
+            <br />
+            <div class="contact-details">
+              Email: <a href="#">busayo[at]mlcollective[dot]org</a>
+            </div>
+            <!-- <div class="contact-details">
+              Email: <a href="#">busayo[at]intron[dot]io</a>
+            </div> -->
+            
+            <div class="social">
+              <a
+                class="social-item"
+                href="https://scholar.google.com/citations?user=PhgD3vYAAAAJ&hl=en"
+                target="_blank"
+                aria-label="Google Scholar Profile"
+              >
+                <i class="ai ai-google-scholar-square" aria-hidden="true"></i>
+              </a>
+              <a
+                class="social-item"
+                href="https://github.com/iambusayor"
+                target="_blank"
+                aria-label="GitHub Profile"
+              >
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a
+                class="social-item"
+                href="https://twitter.com/_busayo_awobade"
+                target="_blank"
+                aria-label="Twitter Profile"
+              >
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="page-intro-item">
+            <img
+              src="assets/img/busayo_dakar_cropped.png"
+              alt="Busayo Awobade"
+              width="250" 
+              class="roundImg"
+            />
+          </div>
+        </div>
+        <p>Welcome! 😎</p>
+        
+        <h1 class="header-name">Research</h1>
+        <p style="text-align: justify">
+          My research goal is to make speech and language technology work for everyone, especially in low-resource settings. 
+          My work draws from several areas, including representation learning, data-centric AI, and the development of robust and efficient models. 
+          I am broadly interested in how we can build systems that are fundamentally more adaptable 
+          to the diverse and often imperfect data found in real-world environments.
+        </p>
+        <p style="text-align: justify">
+          Currently, I am working on improving multilingual speech and language models to deliver strong performance without increasing computational costs 
+          through curriculum learning and data pruning strategies. I also explore trade-offs between model compression, computational efficiency, 
+          and robustness to ensure these models are both scalable and accessible. Driven by a commitment to democratizing AI, I strive to develop 
+          tools and resources that support underrepresented communities and broaden participation in global AI research.
+        </p>
+      </div>
+    </article>
+
+    <div class="container">
+      <h1 class="header-name">Selected Publications</h1>
+
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="#" target="_blank">
+            AfriVox: Probing Multilingual and Accent Robustness of Speech LLMs
+          </a>
+        </div>
+        <div class="pub-authors"> <span class="author-highlight">Busayo Awobade</span>,  Mardhiyah Sanni, Tassallah Abdullahi, Chibuzor Okocha, Kelechi Ezema, Devendra Kayande, Lukman Enegi Ismaila, Gloria Ashiya Katuka, Tobi Olatunji </div>
+        <div class="pub-venue" title="The 19th Conference of the European Chapter
+of the Association for Computational Linguistics">UNDER REVIEW</div>
+        <div class="pub-description" id="desc-1" style="display: none;">
+          Introduction of AfriVox, an open-source benchmark for over 20 African languages and 100+ accents, used to evaluate leading multimodal LLMs, reveal significant performance disparities, 
+          and achieve state-of-the-art results through targeted fine-tuning.
+        </div>
+        <button class="read-more-btn" onclick="toggleDescription('desc-1', this)"  aria-expanded="false">Read more ▼</button>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="#" target="_blank">
+            AfriSpeech-MultiBench: A Verticalized Multidomain Multicountry Benchmark Suite for African Accented English ASR
+          </a>
+        </div>
+        <div class="pub-authors">Gabrial Zencha Ashungafac, Mardhiyah Sanni,  <span class="author-highlight">Busayo Awobade</span>, Alex Gichamba, Tobi Olatunji</div>
+        <div class="pub-venue" title="International Joint Conference on Natural Language Processing & Asia-Pacific Chapter of the Association for Computational Linguistics">IJCNLP-AACL 2025</div>
+        <div class="pub-description" id="desc-2" style="display: none;">
+          Development and empirical analysis of Afrispeech-MultiBench, the first domain-specific evaluation benchmark for assessing speech recognition performance 
+          across 100+ African English accents and six application domains.
+        </div>
+        <button class="read-more-btn" onclick="toggleDescription('desc-2', this)"  aria-expanded="false">Read more ▼</button>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2505.20564" target="_blank">
+            The NaijaVoices Dataset: Cultivating Large-Scale, High-Quality, Culturally-Rich Speech Data for African Languages
+          </a>
+        </div>
+        <div class="pub-authors"> Chris Emezue, NaijaVoices Community, <span class="author-highlight">Busayo Awobade</span>,  Abraham Owodunni, Handel Emezue, Gloria  Emezue, Nefertiti Emezue, Sewade Ogun, Bunmi Akinremi, David Adelani, Chris Pal</div>
+        <div class="pub-venue" title="INTERSPEECH">Interspeech 2025</div>
+        <div class="pub-description" id="desc-3" style="display: none;">
+          Creation and validation of NaijaVoices, a novel 1,800-hour speech dataset for low-resource Nigerian languages 
+          (Igbo, Hausa, and Yoruba), addressing critical data scarcity and enabling substantial performance gains 
+          in automatic speech recognition models.
+        </div>
+        <button class="read-more-btn" onclick="toggleDescription('desc-3', this)"  aria-expanded="false">Read more ▼</button>
+      </div>
+      
+
+      <div class="publication-item">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2404.04759" target="_blank">
+            What Happens When Small Is Made Smaller? Exploring the Impact of Compression on Small Data Pretrained Language Models
+          </a>
+        </div>
+        <div class="pub-authors"><span class="author-highlight">Busayo Awobade*</span>, Mardiyyah Oduwole*, Steven Kolawole*</div>
+        <div class="pub-venue" title="5th Workshop on African Natural Language Processing">AfricaNLP 2024</div>
+        <div class="pub-description" id="desc-4" style="display: none;">
+          Demonstrates that compression techniques significantly improve the efficiency and effectiveness of small, 
+          low-resource language models, confirming that their benefits are not limited to large-scale models.
+        </div>
+        <button class="read-more-btn" onclick="toggleDescription('desc-4', this)" aria-expanded="false">Read more ▼</button>
+      </div>
+
+      <div class="read-more-button">
+        <a href="publications.html">Complete Publication List</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="header-name">Recent Highlights</h1>
+      <ul class="list">
+<li>
+          <a href="#" target="_blank" class="link-primary">
+              AfriSpeech-MultiBench: A Verticalized Multidomain Multicountry Benchmark Suite for African Accented English ASR
+            </a> was accepted at IJCNLP-AACL 2025. (DEC 2025)
+        </li>
+        <li>
+          <a href="https://arxiv.org/abs/2505.20564" target="_blank" class="link-primary">
+              The NaijaVoices Dataset: Cultivating Large-Scale, High-Quality, Culturally-Rich Speech Data for African Languages
+            </a
+          > was accepted at INTERSPEECH 2025. (MAY 2025)
+        </li>
+
+      </ul>
+      <div class="read-more-button">
+        <a href="news.html">More Updates</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="header-name">Community Impact</h1>
+      <p style="text-align: justify">
+        I am all about making AI research more accessible, not just with algorithms, 
+        but also by building infrastructure that helps everyone get involved. 
+        Every year, I mentor college students at the <a href="https://funaab.edu.ng/" target="_blank" class="link-primary">Federal University of Agriculture Abeokuta</a>, 
+        helping them figure out what they want to research.
+
+      </p>
+
+      <p style="text-align: justify">
+        I am also a founding organizer at 
+        <a href="https://mlcollective.org/" target="_blank" class="link-primary">ML Collective</a
+        >-Nigeria, a grassroots research hub that fosters research outside formal academic structures. We
+         run peer-led study groups, host research sprints, and also leverage MLC's resources to support members––who now publish at top venues––through mentorship, collaborative projects, and idea exchange.</p>
+
+      <p style="text-align: justify">
+        I organize annual fundraisers enabling African student researchers to attend <a href="https://deeplearningindaba.com/" target="_blank" class="link-primary"
+          >Deep Learning Indaba.</a>
+        During my undergraduate years, I helped organize dozens of technical training programs impacting over 3,000 students and personally taught several 
+        hundred students in machine learning, data science, and technical skills.
+      </p>
+
+      <p style="text-align: justify">
+        Outside of research, I enjoy studying and reflecting on the doctrines of the Bible (2 Tim 2:15). 
+        I also enjoy playing chess and football, and watching Arsenal matches. 
+        I value conversations that connect technical work to wider social impact.
+      </p>
+    </div>
+
+    <div class="container">
+      <h1 class="header-name">The Scenic Route to a BSc.</h1>
+      <p style="text-align: justify">
+        I completed my BSc in Computer Science at the 
+        <a href="https://funaab.edu.ng/" target="_blank" class="link-primary"
+          >Federal University of Agriculture Abeokuta</a>, Nigeria, advised by
+        <a
+          href="https://scholar.google.com/citations?user=CatEpc4AAAAJ&hl=en"
+          target="_blank" class="link-primary"
+            >Prof. Olusegun Folorunso</a
+        >. Academic union strike actions and COVID-19 lockdown extended my bachelor's degree timeline beyond the expected 4 years to 6 years. 
+        Fortunately, this gave me more time than a typical undergraduate to explore my many interests 
+        beyond what my immediate environment offered and also amass a diverse mix of interesting experiences.
+      </p>
+      <p style="text-align: justify">
+        I participated in several hackathons and projects, and I occasionally spoke on tools and topics 
+        I liked at tech conferences across different parts of the globe. In 2023, I started learning to be an independent researcher 
+        with <a href="https://mlcollective.org/" target="_blank" class="link-primary"
+        >ML Collective.</a> 
+        Toward the end, I (along with my friends) designed a real-time opinion mining system for digital assets and secured a 
+      <a href="https://www.algorand.foundation/news/social-media-analytics-platform-asalytics-receives-algorand-foundation-grant-award/" target="_blank"
+      class="link-primary">115k USD grant</a
+    > to bring it to life. This enabled me to focus on exploring independent research without worrying much about my living expenses.
+      </p>
+      <p style="text-align: justify">
+        I am a "community-taught" ML practitioner; hence, much of those years were dedicated to giving back to our tech communities, 
+        including Data Science Nigeria, Google Developer Student Club, the National Association of Computing Students, 
+        and ML Collective. This unconventional path—learning and building research capabilities outside formal structures—directly 
+        informs my current work on eliminating barriers to AI accessibility. 
+      </p>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small> <b>Last Updated:</b> Oct, to 2035 </small>
+        <small class="block">
+          © Busayo Awobade. Shamelessly forked from
+          <a href="https://github.com/stevenkolawole/" target="_blank" class="link-primary"
+            >Steven Kolawole's page</a>· 
+            &lt;/&gt; Powered by
+          <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
+          <a href="https://github.com/heiswayi/thinkspace" target="_blank"
+            >Thinkspace</a
+          >; hosted on
+          <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+        </small>
+      </div>
+    </footer>
+
+<script>
+      /**
+       * Toggles the visibility of a publication description.
+       */
+      function toggleDescription(descId, button) {
+        const desc = document.getElementById(descId);
+        // Check using computed style for a more robust toggle
+        const isHidden = window.getComputedStyle(desc).display === 'none';
+        
+        if (isHidden) {
+          desc.style.display = 'block';
+          button.textContent = 'Read less ▲';
+          button.setAttribute('aria-expanded', 'true');
+        } else {
+          desc.style.display = 'none';
+          button.textContent = 'Read more ▼';
+          button.setAttribute('aria-expanded', 'false');
+        }
+      }
+
+      /**
+       * Handles the theme toggle button click.
+       */
+      function handleThemeToggle() {
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+          themeToggle.addEventListener('click', function() {
+            const htmlEl = document.documentElement;
+            if (htmlEl.classList.contains('dark-mode')) {
+              htmlEl.classList.remove('dark-mode');
+              localStorage.setItem('theme', 'light');
+            } else {
+              htmlEl.classList.add('dark-mode');
+              localStorage.setItem('theme', 'dark');
+            }
+          });
+        }
+      }
+
+      /**
+       * Initializes ARIA attributes on page load.
+       */
+      function initializeAria() {
+        const buttons = document.querySelectorAll('.read-more-btn');
+        buttons.forEach(button => {
+          const descId = button.getAttribute('onclick').match(/'([^']+)'/)[1];
+          const desc = document.getElementById(descId);
+          if (desc && window.getComputedStyle(desc).display === 'none') {
+              button.setAttribute('aria-expanded', 'false');
+          } else {
+              button.setAttribute('aria-expanded', 'true');
+          }
+        });
+      }
+
+      // Run initialization code when the page is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        initializeAria();
+        handleThemeToggle();
+      });
+    </script>
+
+  </body>
+</html>
+  </body>
+</html>

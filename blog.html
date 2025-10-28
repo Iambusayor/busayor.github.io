@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Busayo's Blog</title>
+        <script>
+          (function() {
+            var theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+              document.documentElement.classList.add('dark-mode');
+            } else if (theme === 'light') {
+              document.documentElement.classList.remove('dark-mode');
+            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              document.documentElement.classList.add('dark-mode');
+            }
+          })();
+        </script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+        />
+      </head>
+
+    <body>
+        <header class="site-header">
+          <nav class="nav">
+            <div class="container flex-wrap">
+              <h1 class="logo">
+                <a href="https://busayor.github.io/">Busayo Awobade</a>
+              </h1>
+                        <ul class="navbar">
+            <li><a href="index.html">About</a></li> <li><a href="publications.html">Publications</a></li>
+            <li><a href="news.html">Recent Highlights</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="assets/Busayo_Awobade_s_CV_281025.pdf" target="_blank">CV</a></li>
+            
+            <li>
+              <button id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+              </button>
+            </li>
+            </div>
+          </nav>
+        </header>
+    
+        <div class="page container">
+            <h1 class="header-name">Blog</h1>
+            <div class="blog-container">
+                
+                <img src="assets/img/undraw_under_construction_46pa.png" alt="Under Construction">
+                <h1>This page is under construction. For now, I still write occasionally on Medium about my career-related (but life-ish) experiences.</h1>
+                <div class="read-more-button">
+                    <a target="_blank" href="https://medium.com/@hawobade" >Go to Medium</a>
+                </div>
+            </div>
+           
+        </div>
+        <script>
+      /**
+       * Toggles the visibility of a publication description.
+       */
+      function toggleDescription(descId, button) {
+        const desc = document.getElementById(descId);
+        // Check using computed style for a more robust toggle
+        const isHidden = window.getComputedStyle(desc).display === 'none';
+        
+        if (isHidden) {
+          desc.style.display = 'block';
+          button.textContent = 'Read less ▲';
+          button.setAttribute('aria-expanded', 'true');
+        } else {
+          desc.style.display = 'none';
+          button.textContent = 'Read more ▼';
+          button.setAttribute('aria-expanded', 'false');
+        }
+      }
+
+      /**
+       * Handles the theme toggle button click.
+       */
+      function handleThemeToggle() {
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+          themeToggle.addEventListener('click', function() {
+            const htmlEl = document.documentElement;
+            if (htmlEl.classList.contains('dark-mode')) {
+              htmlEl.classList.remove('dark-mode');
+              localStorage.setItem('theme', 'light');
+            } else {
+              htmlEl.classList.add('dark-mode');
+              localStorage.setItem('theme', 'dark');
+            }
+          });
+        }
+      }
+
+      /**
+       * Initializes ARIA attributes on page load.
+       */
+      function initializeAria() {
+        const buttons = document.querySelectorAll('.read-more-btn');
+        buttons.forEach(button => {
+          const descId = button.getAttribute('onclick').match(/'([^']+)'/)[1];
+          const desc = document.getElementById(descId);
+          if (desc && window.getComputedStyle(desc).display === 'none') {
+              button.setAttribute('aria-expanded', 'false');
+          } else {
+              button.setAttribute('aria-expanded', 'true');
+          }
+        });
+      }
+
+      // Run initialization code when the page is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        initializeAria();
+        handleThemeToggle();
+      });
+    </script>
+      </body>
+</html>
